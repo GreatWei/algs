@@ -22,7 +22,7 @@ public class Test111 {
 		// while (!StdIn.isEmpty()) {
 		// System.out.println(StdIn.readInt());
 		// }
-		// boolean flag = false; //定义一个布尔型变量，判断其是否位于0-1之间
+		// boolean flag = false; //
 		// Scanner scanner =new Scanner(System.in);
 		// double x=scanner.nextDouble();
 		// double y=scanner.nextDouble();

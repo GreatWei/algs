@@ -55,9 +55,62 @@ public class Ten {
 		}
 		return arr;
 	}
-	
-	
-	//
-	
-	
+
+	// 希尔排序
+	public static int[] shellSort(int arr[]) {
+		int tmp;
+		int len = arr.length;
+		int gap = 1;
+		while (gap < len / 3) {
+			gap = gap * 3 + 1;
+
+		}
+		while (gap > 0) {
+			for (int i = gap; i < len; i++) {
+				if (arr[i] < arr[i - gap]) {
+					int j = i - gap;
+					tmp = arr[i];
+					for (; j > 0 && arr[j] > tmp; j = j - gap) {
+						arr[j + gap] = arr[j];
+					}
+					arr[j + gap] = tmp;
+				}
+			}
+			gap = gap / 3;
+		}
+		return arr;
+	}
+
+	// 归并排序
+	public static int[] mergeSort(int[] arr) {
+		// TODO Auto-generated method stub
+		if (arr.length < 2) {
+			return arr;
+		}
+
+		return arr;
+	}
+
+	public static void mergeSort(int[] arr, int left, int right, int[] temp) {
+		// TODO Auto-generated method stub
+		if (left < right) {
+
+		}
+
+	}
+
+	public static void merge(int[] arr, int left, int mid, int right, int[] temp) {
+		int i = left;
+		int j = mid + 1;
+		int k = 0;
+
+		// 区间排序
+		while (i <= mid && j <= right) {
+			if (arr[i] > arr[j]) {
+				temp[k++] = arr[j++];
+			} else {
+				temp[k++] = arr[i++];
+			}
+		}
+	}
 }

@@ -84,17 +84,18 @@ public class Ten {
 	// 归并排序
 	public static int[] mergeSort(int[] arr) {
 		// TODO Auto-generated method stub
-		if (arr.length < 2) {
-			return arr;
-		}
-
+		int[] temp = new int[arr.length];
+		mergeSort(arr, 0, arr.length - 1, temp);
 		return arr;
 	}
 
 	public static void mergeSort(int[] arr, int left, int right, int[] temp) {
 		// TODO Auto-generated method stub
 		if (left < right) {
-
+			int mid = (left + right) / 2;
+			mergeSort(arr, left, mid, temp);
+			mergeSort(arr, mid + 1, right, temp);
+			merge(arr, left, mid, right, temp);
 		}
 
 	}
@@ -112,5 +113,25 @@ public class Ten {
 				temp[k++] = arr[i++];
 			}
 		}
+
+		// 左右剩余区间
+		while (i <= mid) {
+			temp[k++] = arr[i++];
+		}
+		while (j <= mid) {
+			temp[k++] = arr[j++];
+		}
+
+		// 初始化k的指向位置
+		k = 0;
+		while (left <= right) {
+			arr[left++] = temp[k++];
+		}
+		switch("1") {
+		case"1":;
+		}
 	}
+	
+	//快速排序
+	
 }

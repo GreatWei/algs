@@ -127,9 +127,6 @@ public class Ten {
 		while (left <= right) {
 			arr[left++] = temp[k++];
 		}
-		switch("1") {
-		case"1":;
-		}
 	}
 	
 	//快速排序
